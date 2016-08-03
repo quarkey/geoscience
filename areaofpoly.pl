@@ -6,7 +6,7 @@ use Term::ANSIColor qw(:constants);
 use Data::Dumper;
 
 my $coordsfile = shift;
-die "ERROR: Missing coordinate file" unless $coordsfile;
+die RED "ERROR: Missing coordinate file" unless $coordsfile;
 
 if ( -e $coordsfile ) {
     print "INFO: Reading $coordsfile\n\n";
