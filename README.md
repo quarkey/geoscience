@@ -1,2 +1,2 @@
 # geoscience
-varius utils for geo science stuff
+Varius geo science stuff

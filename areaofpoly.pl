@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use warnings;
+#use warnings;
 use strict;
 use Term::ANSIColor qw(:constants);
 
@@ -49,8 +49,8 @@ if ( ( $polyX[0] != $polyX[ $points - 1 ] )
 }
 
 for ( my $i = 0 ; $i < $points ; $i++ ) {
-    #print "CALC: x: " . $polyX[$i] * $polyY[ $i + 1 ];
-    #print " y: " . $polyY[$i] * $polyX[ $i + 1 ] . "\n";
+    print RED "CALC: x: " . $polyX[$i] * $polyY[ $i + 1 ];
+    print " y: " . $polyY[$i] * $polyX[ $i + 1 ] . "\n", RESET;
     $x += $polyX[$i] * $polyY[ $i + 1 ];
     $y += $polyY[$i] * $polyX[ $i + 1 ];
     print "INFO: Distance for "
