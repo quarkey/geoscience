@@ -53,15 +53,13 @@ if ( ( $polyX[0] != $polyX[ $points - 1 ] )
 
 push @polyX, "0";
 push @polyY, "0";
-
 for ( my $i = 0 ; $i < $points ; $i++ ) {
     $x += $polyX[$i] * $polyY[ $i + 1 ];
     $y += $polyY[$i] * $polyX[ $i + 1 ];
-    print "INFO: Distance for point "
+    print "INFO: Calculating point "
       . ( $i + 1 )
-      . " XY direction "
-      . ( $polyX[ $i + 1 ] - $polyX[$i] ) . "/"
-      . ( $polyY[ $i + 1 ] - $polyY[$i] ) . "\n";
+      . " x=$polyX[$i] * y=$polyY[$i +1 ] "
+      . " y=$polyY[$i] * x=$polyX[$i +1 ] \n"
 }
 $area = ( $x - $y ) / 2.0;
 $km2 = $area / 1000 / 1000;
